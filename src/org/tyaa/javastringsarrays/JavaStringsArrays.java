@@ -64,18 +64,47 @@ public class JavaStringsArrays {
             System.out.println();
         }*/
         
+//        for (int i = 0; i <= 10; i++) {
+//            for (int j = 0; j <= 10; j++) {
+//                if(i == 0 && j == 0){
+//                    System.out.printf("%4s", "");
+//                } else if (i == 0) {
+//                    System.out.printf("%4d", j);
+//                } else if (j == 0) {
+//                    System.out.printf("%4d", i);
+//                } else {
+//                    System.out.printf("%4d", i * j);
+//                }
+//                //System.out.printf("%d", i * j);
+//            }
+//            System.out.println();
+//        }
+
+        // создаем массив
+        Integer mas[][] = new Integer[11][11];
+        // заполняем массив
         for (int i = 0; i <= 10; i++) {
             for (int j = 0; j <= 10; j++) {
-                if(i == 0 && j == 0){
-                    System.out.printf("%4s", "");
-                } else if (i == 0) {
-                    System.out.printf("%4d", j);
-                } else if (j == 0) {
-                    System.out.printf("%4d", i);
-                } else {
-                    System.out.printf("%4d", i * j);
+                if (i == 0) {
+                    mas[i][j] = j;
                 }
-                //System.out.printf("%d", i * j);
+                else if (j == 0) {
+                    mas[i][j] = i;
+                }
+                else {
+                    mas[i][j] = i * j;
+                }
+            }
+        }
+        // выводим массив
+        for (int i = 0; i <= 10; i++) {
+            for (int j = 0; j <= 10; j++) {
+                if (i == 0 && j == 0) {
+                    System.out.printf("%4s", "");
+                }
+                else {
+                    System.out.printf("%4d", mas[i][j]);
+                }
             }
             System.out.println();
         }
